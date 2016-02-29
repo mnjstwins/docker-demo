@@ -1,0 +1,87 @@
+@import '_color-definitions';
+$color-primary: $palette-green-800;
+$color-accent: $palette-teal-300;
+
+@import 'material-design-lite';
+
+@import '_variables';
+$preferred_font: 'Titillium Web', 'Helvetica', 'Arial', sans-serif;
+$performance_font: 'Titillium Web', 'Helvetica', 'Arial', sans-serif;
+
+html {
+    height: 100%
+}
+
+body {
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+    font-family: "Titillium Web", "Helvetica", "Arial", sans-serif;
+}
+
+main {
+    height: 100%;
+}
+
+.mdl-layout__container {
+    height: 100%;
+}
+
+.mdl-layout__header {
+    color: black;
+}
+
+.mdl-layout-title {
+    font-family: $preferred_font;
+}
+
+.mdl-layout__drawer-button {
+    display: none;
+}
+
+.is-small-screen {
+    .mdl-layout__drawer-button {
+        display: inline;
+        color: black;
+    }
+}
+
+.mdl-layout__drawer {
+    background-color: unquote("rgb(")unquote($color-accent)unquote(")");
+    border: none;
+}
+
+.page-content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dd-container {
+    // flex: 1;
+    h1, h2, h3, h4, h5, h6, p {
+        font-family: $preferred_font;
+    }
+    p {
+        font-size: 16px;
+    }
+    width: 100vw;
+    padding: 0;
+}
+
+.dd-player {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    height: 80vh;
+    background-image: url(images/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: unquote("rgb(")unquote($color-primary)unquote(")");
+    overflow-y: auto;
+}
+
+.dd-music-item {
+    cursor: pointer;
+    background-color: unquote("rgb(")unquote($color-accent)unquote(")");
+}
